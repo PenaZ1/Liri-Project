@@ -1,10 +1,11 @@
 {
-  "name": "liri",
+  "name": "Liri-Project",
   "version": "1.0.0",
-  "description": "application for Liri",
-  "main": "logic.js",
+  "description": "In this assignment, I will be making Liri!  Liri is like iphone's Siri.  Except, while siri is a speech interpretation and recognition interface, Liri is a language interpretation and recognition interface.  Liri will be a command line node app that takes in parameters and gives you back data.",
+  "main": "keys.js",
   "dependencies": {
     "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
     "node-spotify-api": "^1.1.1"
   },
   "devDependencies": {},
@@ -15,10 +16,8 @@
     "type": "git",
     "url": "git+https://github.com/Omitakura/Liri-Project.git"
   },
-  "keywords": [
-    "Liri"
-  ],
-  "author": "Pena",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Omitakura/Liri-Project/issues"
