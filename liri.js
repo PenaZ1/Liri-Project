@@ -3,11 +3,14 @@ require("dotenv").config();
 
 
 //Variables
+var request = require("request");
+var fs = require("fs");
 //Add the code required to import the `keys.js` file and store it in a variable
 var keys = require("./keys.js");
 //You should then be able to access your keys information like so
-var spotify = new Spotify(keys.spotify);
 var Spotify = require('node-spotify-api');
+var spotify = new Spotify(keys.spotify);
+
 //variable to hold user inputs
 var userOption = process.argv[2];
 var inputParameter = process.argv[3];
@@ -38,7 +41,7 @@ function UserInputs(userOption, inputParameter) {
 
 //function to get concert info from the bands in town api
 function showConcertInfo(inputParameter) {
-    var queryURL = "https://rest.bandsintown.com/artists/" + inputParameter + "/events?app_id=codingbootcamp"
+    var queryURL = "https://rest.bandsintown.com/artists/" + inputParameter + "/events?app_id=codingbootcamp";
     request(queryURL, function (error, response, body) {
         //if we got a good request
         if (!error && response.statusCode === 200) {
@@ -47,7 +50,7 @@ function showConcertInfo(inputParameter) {
                 console.log("~~~~~~~EVENT INFO~~~~~~~\n");
                 fs.appendFileSync("log.txt", "~~~~~~~EVENT INFO~~~~~~~");
                 console.log(i);
-                fs.appendFileSynce("log.txt", i + "\n");
+                fs.appendFileSync("log.txt", i + "\n");
                 console.log("Name of the Venue: " + concerts[i].venue.name);
                 fs.appendFileSync("log.txt", "Name of the Venue: " + concerts[i].venue.name + "\n");
                 console.log("Venue Location: " + concerts[i].venue.city);
@@ -64,10 +67,10 @@ function showConcertInfo(inputParameter) {
 }
 
 //function for spotify
-function showSongInfor(inputParameter) {
+function showSongInfo(inputParameter) {
     if (inputParameter === undefined) {
         //default song i put in
-        inputParameter = "Lover Chanting"
+        inputParameter = "Lover Chanting";
     }
     spotify.search(
         {
