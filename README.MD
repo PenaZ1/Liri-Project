@@ -13,13 +13,3 @@ spotify-this-song (Will search for all songs relevant to searched song.)
 movie-this (will search for all movies relevant to searched movie.)
 
 do-what-it-says (will read the text in the random.txtfile and perform the command listed in the file.)
-## Examples
-
-Here are examples for you to view.
-
-concert-this
-```
-(/Images/liri1.PNG)
-Format: ![Alt Text](https://github.com/Omitakura/Liri-Project/Images/liri1.PNG)
-
-```
