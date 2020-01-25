@@ -19,6 +19,7 @@ Here are examples for you to view.
 
 concert-this
 ```
-![concert-this](https://github.com/Omitakura/Liri-Project/Images/liri1.PNG)
+(/Images/liri1.PNG)
+Format: ![Alt Text](https://github.com/Omitakura/Liri-Project/Images/liri1.PNG)
 
 ```
